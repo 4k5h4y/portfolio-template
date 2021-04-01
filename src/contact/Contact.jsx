@@ -41,7 +41,6 @@ const Contact = () => {
 
 const sendEmail = (event) => {
     event.preventDefault();
-    console.log("mail sent", event.target);
     console.log(formData)
 }
 
