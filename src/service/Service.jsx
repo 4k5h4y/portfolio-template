@@ -1,32 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Card from '../card/Card';
-import web from '../images/home-image.svg';
+import CardGrid from '../card/CardGrid';
+import data from '../resources/cards-data';
 
 const Service = () => {
-    let i = 0;
-    let max = 10;
     return <div>
         <div className="my-5">
             <h1 className="text-center">Our Services</h1>
         </div>
-        <div className="container-fluid mb-5">
-            <div className="row">
-                <div className="col-10 mx-auto">
-                    <div className="row gy-4">
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                        <Card />
-                    </div>
-                </div>
-            </div>
+        <div className="container mb-5">
+            <CardGrid data={data} />
         </div>
+        <img src="../images/example.png" alt="..." />
     </div>
 }
 
