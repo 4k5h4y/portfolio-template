@@ -1,18 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import web from '../images/home-image.svg';
+import './Card.css';
 
-const Card = () => {
-    return <div>
-        <div className="col-md-4 col-10 mx-auto">
-            <div class="card">
-                <img src={web} class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <NavLink to="/" class="btn btn-primary">Go somewhere</NavLink>
-                </div>
-            </div>
+const Card = (props) => {
+    let data = props.data;
+    return <div className="card">
+        <img src={data.imgSrc} className="card-img-top" alt="..." />
+        <div className="card-body">
+            <h5 className="card-title">{data.title}</h5>
+            <p className="card-text">{data.description}</p>
+            <NavLink to={data.btnData.navlink} className="btn btn-primary">{data.btnData.name}</NavLink>
         </div>
     </div>
 }
